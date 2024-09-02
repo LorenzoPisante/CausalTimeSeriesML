@@ -1,6 +1,7 @@
 # CausalTimeSeriesML
 
-# Neurochaos-TimeSeries: A Comprehensive Study of Time Series Cause-Effect Classification and Preservation
+## Full name: Neurochaos-TimeSeries: A Comprehensive Study of Time Series Cause-Effect Classification and Preservation
+
 
 ## Overview
 
@@ -19,6 +20,32 @@ The goal of this research was to assess how well these methods preserve causal r
 - **Preservation of Causal Dynamics**: This project demonstrates that preserving the causal structure in time series data enhances the generalization capabilities of machine learning models.
 - **Experimental Evaluation**: Extensive experiments were conducted on synthetic and real-world datasets from the UCR Time Series Classification Archive, including noise introduction, few-shot learning, and transfer learning scenarios.
 - **Neurochaos Learning**: The study highlights the superior performance of Neurochaos Learning in maintaining causal relationships and achieving better generalization on synthetic datasets.
+
+## Experiments and Evaluation
+
+### Synthetic Data Experiments
+
+#### 1. **Noise Introduction**
+To evaluate the robustness of the models, Gaussian noise was added to the synthetic datasets. The impact of noise on classification accuracy was analyzed to determine the models' ability to maintain performance under perturbations.
+
+#### 2. **Few-Shot Learning**
+Few-shot learning experiments were conducted to test the models' generalization capabilities with limited training data. The goal was to assess how well the models could learn from a small number of examples and still generalize effectively to unseen data.
+
+#### 3. **Transfer Learning**
+Transfer learning was explored by training the models on one synthetic dataset and then evaluating their performance on a different but related dataset. This experiment tested the adaptability of the models to new domains with similar characteristics.
+
+### Benchmark Evaluation on UCR Datasets
+
+The final evaluation involved a comprehensive benchmark on real-world datasets from the **UCR Time Series Classification Archive**. This archive includes a diverse set of time series datasets across various domains, providing a robust test bed for time series classification algorithms.
+
+#### **Experimental Setup**
+- **Datasets**: A selection of datasets from the UCR archive was chosen to represent different types of time series, including those with varying lengths, class distributions, and levels of difficulty.
+- **Training and Testing**: Each dataset was divided into predefined training and testing sets, as provided by the UCR archive. The models were trained on the training sets and evaluated on the test sets.
+- **Metrics**: Classification accuracy was used as the primary metric for evaluation, along with an analysis of the preservation of causal dynamics using the Kernel Granger Causality method.
+
+#### **Results**
+- **Accuracy**: The models were compared based on their classification accuracy across different UCR datasets. Neurochaos Learning consistently showed strong performance, particularly on datasets where preserving causal dynamics is crucial.
+- **Causality Preservation**: The preservation of causal relationships was analyzed by comparing the causal structures in the original time series data with those in the predictions made by the models. Neurochaos Learning was found to be superior in maintaining these relationships.
 
 ## Methods and Tools
 
@@ -87,3 +114,4 @@ I would like to thank my advisors, Prof. Giacomo Boracchi and Prof. Harikrishnan
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
