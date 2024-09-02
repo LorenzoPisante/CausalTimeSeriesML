@@ -15,6 +15,10 @@ In this project, I explored three key classification methods:
 
 The goal of this research was to assess how well these methods preserve causal relationships in time series data and their impact on the generalization and robustness of the models.
 
+<img src="images/neurochaos_architecture.png" alt="Neurochaos Learning Architecture" width="600"/>
+
+*Figure 1: Pseudo architecture of the Neurochaos Learning method.*
+
 ## Key Contributions
 
 - **Preservation of Causal Dynamics**: This project demonstrates that preserving the causal structure in time series data enhances the generalization capabilities of machine learning models.
@@ -27,6 +31,9 @@ The goal of this research was to assess how well these methods preserve causal r
 
 #### 1. **Noise Introduction**
 To evaluate the robustness of the models, Gaussian noise was added to the synthetic datasets. The impact of noise on classification accuracy was analyzed to determine the models' ability to maintain performance under perturbations.
+<img src="images/accuracy_noise.png" alt="Accuracy with Gaussian Noise" width="600"/>
+
+*Figure 2: Accuracy of the methods as a function of the noise parameter (μ) with Gaussian noise added.*
 
 #### 2. **Few-Shot Learning**
 Few-shot learning experiments were conducted to test the models' generalization capabilities with limited training data. The goal was to assess how well the models could learn from a small number of examples and still generalize effectively to unseen data.
@@ -45,7 +52,11 @@ The final evaluation involved a comprehensive benchmark on real-world datasets f
 
 #### **Results**
 - **Accuracy**: The models were compared based on their classification accuracy across different UCR datasets. Neurochaos Learning consistently showed strong performance, particularly on datasets where preserving causal dynamics is crucial.
-- **Causality Preservation**: The preservation of causal relationships was analyzed by comparing the causal structures in the original time series data with those in the predictions made by the models. Neurochaos Learning was found to be superior in maintaining these relationships.
+- **Benchmark Comparison**: In addition to MLP, KAN, and Neurochaos Learning, other state-of-the-art methods such as ResNet and CNN were also considered for comparison.
+
+![Benchmark Results](images/benchmark_results.png)
+
+*Figure 3: Performance comparison of various methods on the UCR benchmark datasets.*
 
 ## Methods and Tools
 
@@ -114,4 +125,5 @@ I would like to thank my advisors, Prof. Giacomo Boracchi and Prof. Harikrishnan
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
 
